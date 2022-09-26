@@ -1,0 +1,17 @@
+.square{
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+}
+
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.board .square{
+  flex-basis: 33.3%;
+}
