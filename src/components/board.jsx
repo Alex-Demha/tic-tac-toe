@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Square from "./square";
+import Plot from "./plot";
 
 class Board extends Component {
   constructor() {
@@ -69,25 +70,48 @@ class Board extends Component {
     this.checkWinner(array);
   };
 
+  resetGame = () => {
+    let a = Array(9).fill("");
+    this.setState({ tic: a });
+    console.log(this.state.tic);
+    this.setState({ win: false });
+    this.setState({ draw: false });
+  };
+
+  resetButton = () => {
+    if (this.state.win || this.state.draw) {
+      return (
+        <button className="reset-button" onClick={this.resetGame}>
+          Reset
+        </button>
+      );
+    }
+  };
+
   render() {
     let status = this.state.current;
-    let winner = this.state.win ? "the winner is:" + this.state.current : "";
+    let winner = this.state.win ? "the winner is: " + this.state.current : "";
     if (this.state.draw && winner === "") winner = "It's a DRAW!";
     return (
-      <div>
-        <div className="status">Next player: {status}</div>
-        <div className="board">
-          {this.state.values.map((value) => (
-            <Square
-              key={value}
-              onPress={() => this.handlePress(value)}
-              value={this.state.tic[value]}
-            />
-          ))}
-        </div>
+      <React.Fragment>
+        <Plot />
 
-        <span className="win">{winner}</span>
-      </div>
+        <div className="container">
+          <div className="status">Next player: {status}</div>
+          <div className="board">
+            {this.state.values.map((value) => (
+              <Square
+                key={value}
+                onPress={() => this.handlePress(value)}
+                value={this.state.tic[value]}
+                num={value}
+              />
+            ))}
+          </div>
+          <span className="win">{winner}</span>
+          {this.resetButton()}
+        </div>
+      </React.Fragment>
     );
   }
 }
