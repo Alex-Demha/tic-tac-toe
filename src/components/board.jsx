@@ -10,6 +10,7 @@ class Board extends Component {
       current: "X",
       win: false,
       draw: false,
+      shape: "X",
     };
   }
   renderSquare = (i) => {
@@ -51,6 +52,10 @@ class Board extends Component {
     if (wc === 9) this.setState({ draw: true });
   };
 
+  drawClass = (current) => {
+    return current === "X" ? "draw-x" : "draw-o";
+  };
+
   handlePress = (e) => {
     const array = [...this.state.tic];
 
@@ -67,7 +72,7 @@ class Board extends Component {
   render() {
     let status = this.state.current;
     let winner = this.state.win ? "the winner is:" + this.state.current : "";
-    if (this.state.draw) winner = "It's a DRAW!";
+    if (this.state.draw && winner === "") winner = "It's a DRAW!";
     return (
       <div>
         <div className="status">Next player: {status}</div>
