@@ -20,7 +20,7 @@ class Plot extends Component {
           Xbox's, and even Nintendo's game pads and controllers, while the Os
           are subjected to only Playstaion's? the battle ahead will determine
           the rest of their fate... so choose your side carrefully. (O's play
-          with the disadvantage of being secind to play)
+          with the disadvantage of being second to play)
         </div>
 
         <button className="plot-button" onClick={() => this.setplotClasses()}>
