@@ -74,10 +74,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 the classic game is back! and worse than ever too!
 but hey, it works, and that's what matters most.
 
-### Future Plan
+Play a side of two factions in a vicious war that mimics our reality, for one side thinks they're being victims of racism and getting the respect they claim to deserve!
 
-just make it look pretty, or at least less ugly.
+have fun though ;)
 
-### Visit the site
+### Where The Game Sits
 
-simply click on https://Alex-Demha.github.io/tic-tac-toe and enjoy ^w^
+The game is nearly finished, I only need to style the texts a bit better.
+all the animations are custom made by me using mostly CSS.
+
+### Visit The Site & Play!
+
+simply click on https://Alex-Demha.github.io/tic-tac-toe and enjoy ^\_^
+(Published on Github Pages).
