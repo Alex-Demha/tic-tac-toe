@@ -13,12 +13,14 @@ class Plot extends Component {
     return (
       <div className={this.state.plotClasses}>
         <div className="plot-text">
-          in a world where humans are Xs and Os, the Os grow ever so jelous over
-          the fact they're under-represnted and under-appreciated, they feel
-          like they should also be on multiple game controllers, why should the
-          X be present on Playstations, Xboxs, and even Nintendos Controllers,
-          while the Os are subjected to only Playstaion? the battle ahead will
-          determine the rest of their fate... so choose your side carrefully.
+          in a world where humans are Xs and Os, the Os grow ever so jealous
+          over the fact they're under-represented and under-appreciated, they
+          strongly feel like they should also be on multiple game
+          controllers,after all why should the Xs be present on Playstation's,
+          Xbox's, and even Nintendo's game pads and controllers, while the Os
+          are subjected to only Playstaion's? the battle ahead will determine
+          the rest of their fate... so choose your side carrefully. (O's play
+          with the disadvantage of being secind to play)
         </div>
 
         <button className="plot-button" onClick={() => this.setplotClasses()}>

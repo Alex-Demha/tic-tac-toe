@@ -90,8 +90,9 @@ class Board extends Component {
 
   render() {
     let status = this.state.current;
-    let winner = this.state.win ? "the winner is: " + this.state.current : "";
-    if (this.state.draw && winner === "") winner = "It's a DRAW!";
+    let winner = this.state.win ? this.state.current + "'s Are Vitorious!" : "";
+    if (this.state.draw && winner === "")
+      winner = "The Battle Sits at a Stalemate";
     return (
       <React.Fragment>
         <Plot />
