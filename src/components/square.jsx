@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import plot from "./plot";
 
 class Square extends Component {
   drawClass = (value) => {
